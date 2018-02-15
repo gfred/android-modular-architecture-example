@@ -1,0 +1,10 @@
+<!-- Put all strings in common module. So you can use a single PhraseApp project for all strings. -->
+<!-- Possible split into modules, but not practical and confusing for our copywriter -->
+<resources>
+    <string name="app_name">Modular Architecture Example</string>
+    <string name="feature_two_title">Feature 2</string>
+    <string name="feature_two_message">Feature 2 is showing.</string>
+    <string name="feature_one_title">Feature 1</string>
+    <string name="feature_one_view_one_button">Click me</string>
+    <string name="feature_one_view_two_button">Click me, too</string>
+</resources>
