@@ -10,8 +10,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : MainActivityViewActions, AppCompatActivity() {
 
-    lateinit var buttonOne : Button
-    lateinit var buttonTwo : Button
+    lateinit var buttonOne: Button
+    lateinit var buttonTwo: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidInjection.inject(this);
@@ -21,7 +21,9 @@ class MainActivity : MainActivityViewActions, AppCompatActivity() {
         buttonOne = Button(this);
         buttonTwo = Button(this);
 
-        RxView.clicks(buttonTwo).subscribe{Toast.makeText(this, "Button from View Two clicked.", Toast.LENGTH_SHORT).show()}
+        // TODO LAYOUT PARAMS?!
+
+        RxView.clicks(buttonTwo).subscribe { Toast.makeText(this, "Button from View Two clicked.", Toast.LENGTH_SHORT).show() }
 
         buttonContainer.addView(buttonOne)
         buttonContainer.addView(buttonTwo)

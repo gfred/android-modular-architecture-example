@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion project.android_compileSDK
@@ -29,6 +30,9 @@ dependencies {
     implementation project(":common")
     implementation project(":featureOne")
     implementation project(":featureTwo")
+
+    kapt 'com.google.dagger:dagger-compiler:2.14.1'
+    kapt 'com.google.dagger:dagger-android-processor:2.14.1'
 
     // TODO TEST AS API PROVIDED FROM COMMON?
     testImplementation 'junit:junit:4.12'

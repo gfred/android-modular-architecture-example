@@ -1,4 +1,6 @@
-apply plugin: 'com.android.feature'
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion project.android_compileSDK
@@ -24,6 +26,9 @@ android {
 
 dependencies {
     implementation project(":common")
+
+    kapt 'com.google.dagger:dagger-compiler:2.14.1'
+    kapt 'com.google.dagger:dagger-android-processor:2.14.1'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'

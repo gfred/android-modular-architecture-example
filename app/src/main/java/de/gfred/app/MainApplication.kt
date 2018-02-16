@@ -1,29 +1,23 @@
 package de.gfred.app
 
-import android.app.Activity
-import android.app.Application
-import dagger.android.DispatchingAndroidInjector
+import dagger.android.AndroidInjector
+import dagger.android.DaggerApplication
 import dagger.android.HasActivityInjector
+import de.gfred.feature.one.MainActivityViewActions
+import de.gfred.feature.two.FeatureTwoActivity
 import javax.inject.Inject
 
 
+class MainApplication : HasActivityInjector, DaggerApplication() {
 
-class MainApplication : HasActivityInjector, Application() {
     @Inject
-    lateinit var activityDispatchingAndroidInjector: DispatchingAndroidInjector<Activity>
-
-//    val component: AppComponent by lazy {
-//        DaggerAppComponent
-//                .builder()
-//                .appModule(AppModule(this))
-//                .build()
-//    }
+    lateinit var mainAc: MainActivityViewActions
 
     override fun onCreate() {
         super.onCreate()
+
+        mainAc.onButtonOneClicked().subscribe { FeatureTwoActivity.start(this) }
     }
 
-    override fun activityInjector(): DispatchingAndroidInjector<Activity> {
-        return activityDispatchingAndroidInjector
-    }
+    override fun applicationInjector(): AndroidInjector<out DaggerApplication> = DaggerAppComponent.builder().create(this)
 }
