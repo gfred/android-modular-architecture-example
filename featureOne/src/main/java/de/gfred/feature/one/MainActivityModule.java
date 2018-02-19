@@ -4,9 +4,11 @@ import dagger.Module;
 import dagger.Provides;
 
 @Module
-public class MainActivityModule {
+public class MainActivityModule
+{
     @Provides
-    MainActivityViewActions provideMainView(MainActivity mainActivity) {
+    MainActivityViewActions provideMainView(MainActivity mainActivity)
+    {
         return mainActivity;
     }
 }
