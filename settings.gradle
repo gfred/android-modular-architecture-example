@@ -1,1 +1,7 @@
-include ':app', ':common', ':featureOne', ':featureTwo', ':featureOneViewOne', ':featureOneViewTwo'
+include ':app'
+include 'common:usecases'
+include 'common:libraries'
+include 'features:featureOne'
+include 'features:featureTwo'
+include 'features:featureOneViewOne'
+include 'features:featureOneViewTwo'
