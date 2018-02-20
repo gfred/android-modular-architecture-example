@@ -7,8 +7,13 @@ import android.widget.Toast
 import com.jakewharton.rxbinding2.view.RxView
 import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.activity_main.*
+import javax.inject.Inject
 
 class MainActivity : MainActivityViewActions, AppCompatActivity() {
+
+
+    @Inject
+
 
     lateinit var buttonOne: Button
     lateinit var buttonTwo: Button
