@@ -28,6 +28,7 @@ android {
 
 dependencies {
     implementation project(':common:libraries')
+    implementation project(':common:usecases')
 
     kapt 'com.google.dagger:dagger-compiler:2.14.1'
     kapt 'com.google.dagger:dagger-android-processor:2.14.1'

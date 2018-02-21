@@ -2,29 +2,22 @@ package de.gfred.feature.one
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.widget.Button
 import android.widget.Toast
 import com.jakewharton.rxbinding2.view.RxView
-import dagger.android.AndroidInjection
+import de.gfred.feature.one.view.two.ViewTwoButton
+import de.gfred.featureoneviewone.ViewOneButton
 import kotlinx.android.synthetic.main.activity_main.*
-import javax.inject.Inject
 
 class MainActivity : MainActivityViewActions, AppCompatActivity() {
-
-
-    @Inject
-
-
-    lateinit var buttonOne: Button
-    lateinit var buttonTwo: Button
+    lateinit var buttonOne: ViewOneButton
+    lateinit var buttonTwo: ViewTwoButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        AndroidInjection.inject(this);
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        buttonOne = Button(this);
-        buttonTwo = Button(this);
+        buttonOne = ViewOneButton(this);
+        buttonTwo = ViewTwoButton(this);
 
         // TODO LAYOUT PARAMS?!
 

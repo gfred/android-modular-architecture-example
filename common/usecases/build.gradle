@@ -25,6 +25,7 @@ android {
 dependencies {
     implementation project(':common:libraries')
     implementation project(':features:featureOne')
+    implementation project(':features:featureTwo')
 
     implementation 'com.android.support:appcompat-v7:26.1.0'
     testImplementation 'junit:junit:4.12'
