@@ -9,23 +9,35 @@ import de.gfred.featureoneviewone.ViewOneButton
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : MainActivityViewActions, AppCompatActivity() {
+    private var presenter = MainPresenter()
+
     lateinit var buttonOne: ViewOneButton
     lateinit var buttonTwo: ViewTwoButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        initView()
 
+        presenter.create(this)
+    }
+
+    override fun onStop() {
+        presenter.destroy()
+        super.onStop()
+    }
+
+    private fun initView() {
         buttonOne = ViewOneButton(this);
-        buttonTwo = ViewTwoButton(this);
-
-        // TODO LAYOUT PARAMS?!
-
-        RxView.clicks(buttonTwo).subscribe { Toast.makeText(this, "Button from View Two clicked.", Toast.LENGTH_SHORT).show() }
-
         buttonContainer.addView(buttonOne)
+
+        buttonTwo = ViewTwoButton(this);
         buttonContainer.addView(buttonTwo)
     }
 
     override fun onButtonOneClicked() = RxView.clicks(buttonOne)
+
+    override fun onButtonTwoClicked() = RxView.clicks(buttonTwo)
+
+    override fun showToast() = Toast.makeText(this, "Button from View Two clicked.", Toast.LENGTH_SHORT).show()
 }
