@@ -23,7 +23,7 @@ android {
 }
 
 dependencies {
-    implementation project(':common:libraries')
+    implementation project(':shared:libraries')
     implementation project(':features:featureOne')
     implementation project(':features:featureTwo')
 
