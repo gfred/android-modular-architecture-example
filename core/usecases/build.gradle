@@ -24,10 +24,10 @@ android {
 
 dependencies {
     implementation project(':shared:libraries')
+    implementation project(':core:services')
     implementation project(':features:featureOne')
     implementation project(':features:featureTwo')
 
-    implementation 'com.android.support:appcompat-v7:26.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
