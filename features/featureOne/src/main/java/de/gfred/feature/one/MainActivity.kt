@@ -8,9 +8,11 @@ import dagger.android.AndroidInjection
 import de.gfred.feature.one.view.two.ViewTwoButton
 import de.gfred.featureoneviewone.ViewOneButton
 import kotlinx.android.synthetic.main.activity_main.*
+import javax.inject.Inject
 
-class MainActivity : MainActivityViewActions, AppCompatActivity() {
-    private var presenter = MainPresenter()
+class MainActivity : AppCompatActivity() {
+    @Inject
+    lateinit var presenter: IMainPresenter
 
     lateinit var buttonOne: ViewOneButton
     lateinit var buttonTwo: ViewTwoButton
@@ -20,7 +22,10 @@ class MainActivity : MainActivityViewActions, AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         initView()
+    }
 
+    override fun onStart() {
+        super.onStart()
         presenter.create(this)
     }
 
@@ -37,9 +42,9 @@ class MainActivity : MainActivityViewActions, AppCompatActivity() {
         buttonContainer.addView(buttonTwo)
     }
 
-    override fun onButtonOneClicked() = RxView.clicks(buttonOne)
+    fun onButtonOneClicked() = RxView.clicks(buttonOne)
 
-    override fun onButtonTwoClicked() = RxView.clicks(buttonTwo)
+    fun onButtonTwoClicked() = RxView.clicks(buttonTwo)
 
-    override fun showToast() = Toast.makeText(this, "Button from View Two clicked.", Toast.LENGTH_SHORT).show()
+    fun showToast() = Toast.makeText(this, "Button from View Two clicked.", Toast.LENGTH_SHORT).show()
 }

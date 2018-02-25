@@ -1,8 +1,11 @@
 package de.gfred.feature.one.di;
 
-/**
- * Created by Frederik on 25.02.2018.
- */
+import dagger.Module;
+import dagger.android.ContributesAndroidInjector;
+import de.gfred.feature.one.MainActivity;
 
-public class MainActivityBuilderModule {
+@Module(subcomponents = MainActivityComponent.class)
+public abstract class MainActivityBuilderModule {
+    @ContributesAndroidInjector
+    public abstract MainActivity contributeMainActivity();
 }

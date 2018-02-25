@@ -1,8 +1,17 @@
 package com.mytaxi.common.usecases.di;
 
-/**
- * Created by Frederik on 25.02.2018.
- */
+import dagger.Module;
+import dagger.android.ContributesAndroidInjector;
+import de.gfred.feature.one.MainActivity;
+import de.gfred.feature.one.di.MainActivityComponent;
 
-public class ActivityUseCasesModule {
+
+//@Module(includes = MainActivityBuilderModule.class)
+//public abstract class ActivityUseCasesModule {
+//}
+
+@Module(subcomponents = MainActivityComponent.class)
+public abstract class ActivityUseCasesModule {
+    @ContributesAndroidInjector
+    public abstract MainActivity contributeMainActivity();
 }

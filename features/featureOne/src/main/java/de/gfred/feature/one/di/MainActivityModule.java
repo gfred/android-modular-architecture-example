@@ -1,14 +1,18 @@
-package de.gfred.feature.one;
+package de.gfred.feature.one.di;
+
+import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
+import de.gfred.feature.one.IMainPresenter;
+import de.gfred.feature.one.MainPresenter;
 
 @Module
 public class MainActivityModule
 {
     @Provides
-    MainActivityViewActions provideMainView(MainActivity mainActivity)
-    {
-        return mainActivity;
+    @Singleton
+    public IMainPresenter provideMainPresenter() {
+        return new MainPresenter();
     }
 }

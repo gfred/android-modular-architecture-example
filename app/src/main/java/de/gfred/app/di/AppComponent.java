@@ -1,8 +1,18 @@
 package de.gfred.app.di;
 
-/**
- * Created by Frederik on 25.02.2018.
- */
+import javax.inject.Singleton;
 
-public interface AppComponent {
+import dagger.Component;
+import dagger.android.AndroidInjectionModule;
+import dagger.android.AndroidInjector;
+import de.gfred.app.MainApplication;
+
+@Singleton
+@Component(modules = {AndroidInjectionModule.class, AppModule.class, ActivityBindingModule.class})
+public interface AppComponent extends AndroidInjector<MainApplication> {
+
+    @Component.Builder
+    abstract class Builder extends AndroidInjector.Builder<MainApplication> {
+    }
+
 }

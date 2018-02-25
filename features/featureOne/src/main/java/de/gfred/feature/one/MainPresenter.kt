@@ -1,18 +1,21 @@
 package de.gfred.feature.one
 
 import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.subjects.PublishSubject
 
 
-class MainPresenter {
+class MainPresenter : IMainPresenter, IMainActions {
     private var disposables = CompositeDisposable()
-    // private var useCaseRepository = UseCase
+    private var onClickSubject = PublishSubject.create<Any>()
 
-    fun create(mainActivity: MainActivityViewActions) {
-        disposables.add(mainActivity.onButtonOneClicked().subscribe { mainActivity.showToast() })
-        disposables.add(mainActivity.onButtonTwoClicked().subscribe {})
+    override fun create(activity: MainActivity) {
+        disposables.add(activity.onButtonOneClicked().subscribe { activity.showToast() })
+        disposables.add(activity.onButtonTwoClicked().subscribe {onClickSubject})
     }
 
-    fun destroy() {
-        disposables.clear()
-    }
+    override fun destroy() =  disposables.clear()
+
+    override fun onButtonShowClick() = onClickSubject
+
+    override fun getEnteredUserName() = "Robin"
 }
