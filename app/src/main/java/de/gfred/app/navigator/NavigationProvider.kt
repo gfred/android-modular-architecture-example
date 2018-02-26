@@ -10,7 +10,7 @@ import de.gfred.feature.two.FeatureTwoActivity
 class NavigationProvider(private val context: Context) : INavigationProvider {
     override fun provideFeatureOneNavigator(): IFeatureOneNavigator = object : IFeatureOneNavigator {
         override fun showFeatureTwo() {
-            context.startActivity(Intent(context, FeatureTwoActivity.javaClass))
+            context.startActivity(Intent(context, FeatureTwoActivity::class.java))
         }
     }
 }
