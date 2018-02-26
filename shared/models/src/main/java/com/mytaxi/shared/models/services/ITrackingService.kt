@@ -1,4 +1,4 @@
-package com.mytaxi.shared.tracking
+package com.mytaxi.shared.models.services
 
 
 interface ITrackingService {

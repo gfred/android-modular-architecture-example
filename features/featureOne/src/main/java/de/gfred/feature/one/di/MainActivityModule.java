@@ -2,6 +2,7 @@ package de.gfred.feature.one.di;
 
 import com.mytaxi.shared.models.navigation.IFeatureOneNavigator;
 import com.mytaxi.shared.models.navigation.INavigationProvider;
+import com.mytaxi.shared.models.services.ITrackingService;
 
 import javax.inject.Singleton;
 
@@ -21,8 +22,8 @@ public class MainActivityModule
     }
 
     @Provides
-    public IMainPresenter provideMainPresenter(final IFeatureOneNavigator navigator)
+    public IMainPresenter provideMainPresenter(final IFeatureOneNavigator navigator, final ITrackingService trackingService)
     {
-        return new MainPresenter(navigator);
+        return new MainPresenter(navigator, trackingService);
     }
 }

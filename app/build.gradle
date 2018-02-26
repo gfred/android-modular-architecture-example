@@ -29,6 +29,7 @@ android {
 dependencies {
     implementation project(':shared:libraries')
     implementation project(':shared:models')
+    implementation project(':shared:tracking')
     implementation project(':features:featureOne')
     implementation project(':features:featureTwo')
 
