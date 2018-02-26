@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion project.android_compileSDK
@@ -10,7 +12,6 @@ android {
         versionName project.version_name
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
     }
 
     buildTypes {
@@ -24,8 +25,6 @@ android {
 
 dependencies {
     implementation project(':shared:libraries')
-    implementation project(":shared:models")
-    implementation project(':core:services')
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'

@@ -1,21 +1,16 @@
 package de.gfred.feature.one
 
+import com.mytaxi.shared.models.navigation.IFeatureOneNavigator
 import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.subjects.PublishSubject
 
 
-class MainPresenter : IMainPresenter, IMainActions {
+class MainPresenter(private val navigation: IFeatureOneNavigator) : IMainPresenter {
     private var disposables = CompositeDisposable()
-    private var onClickSubject = PublishSubject.create<Any>()
 
     override fun create(activity: MainActivity) {
         disposables.add(activity.onButtonOneClicked().subscribe { activity.showToast() })
-        disposables.add(activity.onButtonTwoClicked().subscribe {onClickSubject})
+        disposables.add(activity.onButtonTwoClicked().subscribe { navigation.showFeatureTwo() })
     }
 
-    override fun destroy() =  disposables.clear()
-
-    override fun onButtonShowClick() = onClickSubject
-
-    override fun getEnteredUserName() = "Robin"
+    override fun destroy() = disposables.clear()
 }

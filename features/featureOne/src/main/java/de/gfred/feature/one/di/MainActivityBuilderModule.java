@@ -6,6 +6,6 @@ import de.gfred.feature.one.MainActivity;
 
 @Module(subcomponents = MainActivityComponent.class)
 public abstract class MainActivityBuilderModule {
-    @ContributesAndroidInjector
+    @ContributesAndroidInjector()
     public abstract MainActivity contributeMainActivity();
 }

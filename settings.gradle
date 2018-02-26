@@ -1,6 +1,7 @@
 include ':app'
 include 'core:usecases'
 include 'core:services'
+include 'shared:models'
 include 'shared:libraries'
 include 'shared:tracking'
 include 'features:featureOne'

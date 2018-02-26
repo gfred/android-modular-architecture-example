@@ -25,8 +25,8 @@ android {
 
 dependencies {
     implementation project(":shared:libraries")
-    implementation project(":features:featureOneViewOne")
-    implementation project(":features:featureOneViewTwo")
+    implementation project(":shared:models")
+    implementation project(":core:usecases")
 
     kapt 'com.google.dagger:dagger-compiler:2.14.1'
     kapt 'com.google.dagger:dagger-android-processor:2.14.1'
