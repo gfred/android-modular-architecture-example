@@ -1,9 +1,8 @@
 package com.mytaxi.core.services
 
-import javax.inject.Singleton
+import com.mytaxi.shared.models.services.IUserService
 
 
-@Singleton
 class UserService() : IUserService {
     private var userName = "Batman"
 

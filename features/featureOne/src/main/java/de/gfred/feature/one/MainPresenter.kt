@@ -2,11 +2,13 @@ package de.gfred.feature.one
 
 import com.mytaxi.shared.models.navigation.IFeatureOneNavigator
 import com.mytaxi.shared.models.services.ITrackingService
+import com.mytaxi.shared.models.services.IUserService
 import io.reactivex.disposables.CompositeDisposable
 
 
 class MainPresenter(private val navigation: IFeatureOneNavigator,
-                    private val tracker : ITrackingService) : IMainPresenter {
+                    private val tracker : ITrackingService,
+                    private val userService : IUserService) : IMainPresenter {
 
     private var disposables = CompositeDisposable()
 

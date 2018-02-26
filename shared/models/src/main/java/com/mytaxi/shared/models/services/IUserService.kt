@@ -1,4 +1,4 @@
-package com.mytaxi.core.services
+package com.mytaxi.shared.models.services
 
 interface IUserService {
     fun hasUserName() : Boolean
