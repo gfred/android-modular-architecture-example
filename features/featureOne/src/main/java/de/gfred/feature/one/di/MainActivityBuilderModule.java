@@ -4,8 +4,8 @@ import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
 import de.gfred.feature.one.MainActivity;
 
-@Module(subcomponents = MainActivityComponent.class)
+@Module
 public abstract class MainActivityBuilderModule {
-    @ContributesAndroidInjector()
+    @ContributesAndroidInjector(modules = MainActivityModule.class)
     public abstract MainActivity contributeMainActivity();
 }

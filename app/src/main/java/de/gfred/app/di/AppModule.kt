@@ -1,24 +1,23 @@
 package de.gfred.app.di
 
-import android.app.Application
+import android.content.Context
 import com.mytaxi.shared.models.navigation.INavigationProvider
 import dagger.Module
 import dagger.Provides
+import de.gfred.app.MainApplication
 import de.gfred.app.navigator.NavigationProvider
 import javax.inject.Singleton
 
-
+@Singleton
 @Module
 class AppModule {
     @Provides
-    @Singleton
-    fun providesApplication(application: Application): Application {
+    fun providesApplicationContext(application: MainApplication) : Context {
         return application
     }
 
     @Provides
-    @Singleton
-    fun provideNavigationProvider(application: Application): INavigationProvider {
-        return NavigationProvider(application)
+    fun provideNavigationProvider(context: Context): INavigationProvider {
+        return NavigationProvider(context)
     }
 }

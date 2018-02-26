@@ -1,13 +1,15 @@
 package de.gfred.app.di;
 
+import javax.inject.Singleton;
+
 import dagger.Component;
 import dagger.android.AndroidInjectionModule;
 import dagger.android.AndroidInjector;
 import de.gfred.app.MainApplication;
-import javax.inject.Singleton;
+import de.gfred.feature.one.di.MainActivityBuilderModule;
 
 @Singleton
-@Component(modules = {AndroidInjectionModule.class, AppModule.class, ActivityBuilder.class})
+@Component(modules = {AndroidInjectionModule.class, AppModule.class, MainActivityBuilderModule.class})
 public interface AppComponent extends AndroidInjector<MainApplication>
 {
 
