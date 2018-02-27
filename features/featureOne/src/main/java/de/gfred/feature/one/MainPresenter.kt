@@ -1,5 +1,6 @@
 package de.gfred.feature.one
 
+import android.util.Log
 import com.mytaxi.shared.models.navigation.IFeatureOneNavigator
 import com.mytaxi.shared.models.services.ITrackingService
 import com.mytaxi.shared.models.services.IUserService
@@ -13,6 +14,8 @@ class MainPresenter(private val navigation: IFeatureOneNavigator,
     private var disposables = CompositeDisposable()
 
     override fun create(activity: MainActivity) {
+        Log.d("TEST", ">> USER SERVICE REFERENCE 1: " + userService.toString())
+
         activity.setUserName(userService.getUserName())
 
         disposables.add(activity.onUserNameChanged().subscribe() {

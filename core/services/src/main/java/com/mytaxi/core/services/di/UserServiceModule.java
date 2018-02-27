@@ -9,8 +9,8 @@ import dagger.Provides;
 public class UserServiceModule
 {
     @Provides
-    public IUserService provideUserService()
+    public IUserService provideUserService(final UserService userService)
     {
-        return new UserService();
+        return userService;
     }
 }

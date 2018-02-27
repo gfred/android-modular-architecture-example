@@ -7,18 +7,12 @@ import dagger.Module
 import dagger.Provides
 import de.gfred.app.MainApplication
 import de.gfred.app.navigator.NavigationProvider
-import javax.inject.Singleton
 
-@Singleton
 @Module(includes = [TrackingServiceModule::class])
 class AppModule {
     @Provides
-    fun providesApplicationContext(application: MainApplication) : Context {
-        return application
-    }
+    fun providesApplicationContext(application: MainApplication): Context = application
 
     @Provides
-    fun provideNavigationProvider(context: Context): INavigationProvider {
-        return NavigationProvider(context)
-    }
+    fun provideNavigationProvider(navigationProvider: NavigationProvider): INavigationProvider = navigationProvider
 }
