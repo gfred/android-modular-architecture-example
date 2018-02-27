@@ -4,13 +4,11 @@ import com.mytaxi.shared.models.navigation.IFeatureOneNavigator;
 import com.mytaxi.shared.models.navigation.INavigationProvider;
 import com.mytaxi.shared.models.services.ITrackingService;
 import com.mytaxi.shared.models.services.IUserService;
-
-import javax.inject.Singleton;
-
 import dagger.Module;
 import dagger.Provides;
 import de.gfred.feature.one.IMainPresenter;
 import de.gfred.feature.one.MainPresenter;
+import javax.inject.Singleton;
 
 @Singleton
 @Module
@@ -21,6 +19,7 @@ public class MainActivityModule
     {
         return navigationProvider.provideFeatureOneNavigator();
     }
+
 
     @Provides
     public IMainPresenter provideMainPresenter(final IFeatureOneNavigator navigator, final ITrackingService trackingService, final IUserService userService)
