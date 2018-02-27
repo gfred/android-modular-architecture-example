@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
 import com.jakewharton.rxbinding2.view.RxView
+import com.jakewharton.rxbinding2.widget.RxTextView
 import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
@@ -27,6 +28,13 @@ class MainActivity : AppCompatActivity() {
         presenter.destroy()
         super.onStop()
     }
+
+    fun setUserName(username: String) {
+        etUserName.setText(username)
+        etUserName.setSelection(username.length)
+    }
+
+    fun onUserNameChanged() = RxTextView.textChanges(etUserName)
 
     fun onButtonOneClicked() = RxView.clicks(buttonOne)
 
