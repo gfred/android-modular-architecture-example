@@ -9,4 +9,6 @@
     <string name="feature_one_view_two_button">Click me, too</string>
     <string name="feature_two_user_name">Username:</string>
     <string name="feature_two_user_name_not_available">Username not available</string>
+
+    <string name="tracking_track_msg">track: %s</string>
 </resources>

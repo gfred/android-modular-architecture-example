@@ -1,5 +1,6 @@
 package de.gfred.app.di;
 
+import com.mytaxi.shared.tracking.di.TrackingServiceModule;
 import dagger.Component;
 import dagger.android.AndroidInjectionModule;
 import dagger.android.AndroidInjector;
