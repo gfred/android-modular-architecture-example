@@ -1,7 +1,7 @@
 package com.mytaxi.shared.tracking.di;
 
-import com.mytaxi.shared.models.services.ITrackingService;
-import com.mytaxi.shared.tracking.TrackingService;
+import com.mytaxi.shared.models.tracking.TrackingService;
+import com.mytaxi.shared.tracking.TrackingServiceImpl;
 import dagger.Module;
 import dagger.Provides;
 import javax.inject.Singleton;
@@ -11,8 +11,8 @@ import javax.inject.Singleton;
 public class TrackingServiceModule
 {
     @Provides
-    public ITrackingService provideTrackingService(final TrackingService trackingService)
+    public TrackingService provideTrackingService(final TrackingServiceImpl trackingServiceImpl)
     {
-        return trackingService;
+        return trackingServiceImpl;
     }
 }

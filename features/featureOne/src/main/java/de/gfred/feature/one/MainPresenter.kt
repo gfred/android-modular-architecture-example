@@ -1,14 +1,14 @@
 package de.gfred.feature.one
 
 import android.util.Log
-import com.mytaxi.shared.models.navigation.IFeatureOneNavigator
-import com.mytaxi.shared.models.services.ITrackingService
+import com.mytaxi.shared.models.navigation.features.FeatureOneNavigator
+import com.mytaxi.shared.models.tracking.TrackingService
 import com.mytaxi.shared.models.services.IUserService
 import io.reactivex.disposables.CompositeDisposable
 
 
-class MainPresenter(private val navigation: IFeatureOneNavigator,
-                    private val tracker: ITrackingService,
+class MainPresenter(private val navigation: FeatureOneNavigator,
+                    private val tracker: TrackingService,
                     private val userService: IUserService) : IMainPresenter {
 
     private var disposables = CompositeDisposable()
