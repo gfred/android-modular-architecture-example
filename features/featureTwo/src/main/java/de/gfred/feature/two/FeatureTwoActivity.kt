@@ -9,7 +9,7 @@ import javax.inject.Inject
 class FeatureTwoActivity : AppCompatActivity() {
 
     @Inject
-    protected lateinit var presenter: IFeatureTwoPresenter
+    lateinit var presenter: FeatureTwoPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidInjection.inject(this)

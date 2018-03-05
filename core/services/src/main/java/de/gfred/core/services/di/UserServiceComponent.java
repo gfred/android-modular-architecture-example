@@ -1,12 +1,12 @@
 package de.gfred.core.services.di;
 
-import de.gfred.shared.models.services.IUserService;
+import de.gfred.shared.models.services.StringService;
 import dagger.Subcomponent;
 
 @Subcomponent(modules = UserServiceModule.class)
 public interface UserServiceComponent
 {
-    IUserService userService();
+    StringService userService();
 
     @Subcomponent.Builder
     interface Builder

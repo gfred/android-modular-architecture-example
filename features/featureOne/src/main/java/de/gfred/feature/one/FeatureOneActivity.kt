@@ -6,17 +6,17 @@ import android.widget.Toast
 import com.jakewharton.rxbinding2.view.RxView
 import com.jakewharton.rxbinding2.widget.RxTextView
 import dagger.android.AndroidInjection
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_feature_one.*
 import javax.inject.Inject
 
-class MainActivity : AppCompatActivity() {
+class FeatureOneActivity : AppCompatActivity() {
     @Inject
-    lateinit var presenter: IMainPresenter
+    lateinit var presenter: FeatureOnePresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_feature_one)
     }
 
     override fun onStart() {

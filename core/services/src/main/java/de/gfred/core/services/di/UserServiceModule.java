@@ -1,7 +1,7 @@
 package de.gfred.core.services.di;
 
-import de.gfred.core.services.UserService;
-import de.gfred.shared.models.services.IUserService;
+import de.gfred.core.services.StringServiceImpl;
+import de.gfred.shared.models.services.StringService;
 import dagger.Module;
 import dagger.Provides;
 
@@ -9,7 +9,7 @@ import dagger.Provides;
 public class UserServiceModule
 {
     @Provides
-    public IUserService provideUserService(final UserService userService)
+    public StringService provideUserService(final StringServiceImpl userService)
     {
         return userService;
     }
