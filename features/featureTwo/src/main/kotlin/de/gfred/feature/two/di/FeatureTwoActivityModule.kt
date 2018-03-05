@@ -9,5 +9,5 @@ import de.gfred.shared.services.StringService
 @Module
 class FeatureTwoActivityModule {
     @Provides
-    fun providesFeatureTwoPresenter(userService: StringService): FeatureTwoPresenter = FeatureTwoPresenterImpl(userService)
+    fun providesFeatureTwoPresenter(stringService: StringService): FeatureTwoPresenter = FeatureTwoPresenterImpl(stringService)
 }

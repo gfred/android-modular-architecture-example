@@ -8,9 +8,6 @@ android {
         targetSdkVersion project.android_targetSDK
         versionCode project.version_code
         versionName project.version_name
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
     }
 
     buildTypes {
@@ -20,14 +17,13 @@ android {
         }
     }
 
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
 }
 
 dependencies {
     implementation project(':shared:libraries')
     implementation project(":shared:models")
     implementation project(':core:services')
-
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 }

@@ -1,11 +1,11 @@
 package de.gfred.core.services.di
 
-import de.gfred.shared.services.StringService
 import dagger.Subcomponent
+import de.gfred.shared.services.StringService
 
 @Subcomponent(modules = [StringServiceModule::class])
 interface StringServiceComponent {
-    fun userService(): StringService
+    fun stringService(): StringService
 
     @Subcomponent.Builder
     interface Builder {
