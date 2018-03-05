@@ -1,6 +1,6 @@
 package de.gfred.feature.two.di;
 
-import com.mytaxi.core.services.di.UserServiceModule;
+import de.gfred.core.services.di.UserServiceModule;
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
 import de.gfred.feature.two.FeatureTwoActivity;

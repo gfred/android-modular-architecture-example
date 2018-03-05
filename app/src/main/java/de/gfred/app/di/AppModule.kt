@@ -1,8 +1,8 @@
 package de.gfred.app.di
 
 import android.content.Context
-import com.mytaxi.shared.models.navigation.NavigationProvider
-import com.mytaxi.shared.tracking.di.TrackingServiceModule
+import de.gfred.shared.models.navigation.NavigationProvider
+import de.gfred.shared.tracking.di.TrackingServiceModule
 import dagger.Module
 import dagger.Provides
 import de.gfred.app.MainApplication

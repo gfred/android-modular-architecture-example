@@ -1,6 +1,6 @@
 package de.gfred.feature.two.di;
 
-import com.mytaxi.shared.models.services.IUserService;
+import de.gfred.shared.models.services.IUserService;
 import dagger.Module;
 import dagger.Provides;
 import de.gfred.feature.two.FeatureTwoPresenter;

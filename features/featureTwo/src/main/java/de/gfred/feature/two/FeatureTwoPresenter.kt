@@ -1,7 +1,7 @@
 package de.gfred.feature.two
 
 import android.util.Log
-import com.mytaxi.shared.models.services.IUserService
+import de.gfred.shared.models.services.IUserService
 import javax.inject.Inject
 import javax.inject.Singleton
 

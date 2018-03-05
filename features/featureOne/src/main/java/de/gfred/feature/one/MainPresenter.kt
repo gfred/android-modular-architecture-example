@@ -1,9 +1,9 @@
 package de.gfred.feature.one
 
 import android.util.Log
-import com.mytaxi.shared.models.navigation.features.FeatureOneNavigator
-import com.mytaxi.shared.models.tracking.TrackingService
-import com.mytaxi.shared.models.services.IUserService
+import de.gfred.shared.models.navigation.features.FeatureOneNavigator
+import de.gfred.shared.models.tracking.TrackingService
+import de.gfred.shared.models.services.IUserService
 import io.reactivex.disposables.CompositeDisposable
 
 

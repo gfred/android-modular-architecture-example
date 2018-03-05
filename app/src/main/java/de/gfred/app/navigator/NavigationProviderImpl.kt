@@ -2,8 +2,8 @@ package de.gfred.app.navigator
 
 import android.content.Context
 import android.content.Intent
-import com.mytaxi.shared.models.navigation.NavigationProvider
-import com.mytaxi.shared.models.navigation.features.FeatureOneNavigator
+import de.gfred.shared.models.navigation.NavigationProvider
+import de.gfred.shared.models.navigation.features.FeatureOneNavigator
 import de.gfred.feature.two.FeatureTwoActivity
 import javax.inject.Inject
 import javax.inject.Singleton
