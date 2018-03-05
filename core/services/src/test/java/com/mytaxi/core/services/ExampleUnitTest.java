@@ -1,19 +1,53 @@
 package com.mytaxi.core.services;
 
+import de.gfred.core.services.StringServiceImpl;
+import de.gfred.shared.models.services.StringService;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
- */
 public class ExampleUnitTest
 {
-    @Test
-    public void addition_isCorrect() throws Exception
+    protected StringService service;
+
+
+    @Before
+    public void setUp()
     {
-        assertEquals(4, 2 + 2);
+        service = new StringServiceImpl();
+    }
+
+
+    @After
+    public void tearDown()
+    {
+        service = null;
+    }
+
+
+    @Test
+    public void hasStringValueNotAvailable()
+    {
+        service.setString("Robin");
+        assertTrue(service.hasString());
+    }
+
+
+    @Test
+    public void hasStringValueAvailable()
+    {
+        service.setString("Robin");
+        assertTrue(service.hasString());
+    }
+
+
+    @Test
+    public void hasInitialStringValue()
+    {
+        assertTrue(service.hasString());
+        assertEquals("Batman", service.getString());
     }
 }

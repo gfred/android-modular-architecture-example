@@ -12,7 +12,6 @@ android {
         targetSdkVersion project.android_targetSDK
         versionCode project.version_code
         versionName project.version_name
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -35,9 +34,4 @@ dependencies {
 
     kapt 'com.google.dagger:dagger-compiler:2.14.1'
     kapt 'com.google.dagger:dagger-android-processor:2.14.1'
-
-    // TODO TEST AS API PROVIDED FROM COMMON?
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 }
