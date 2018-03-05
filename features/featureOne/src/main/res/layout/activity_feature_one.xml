@@ -9,57 +9,52 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="94dp"
         android:layout_height="wrap_content"
-        android:text="@string/feature_one_title"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
-
-    <LinearLayout
-        android:id="@+id/buttonContainer"
-        android:layout_width="368dp"
-        android:layout_height="96dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="141dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="8dp"
+        android:text="@string/feature_one_title"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toTopOf="parent"/>
 
-        <Button
-            android:id="@+id/buttonOne"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Show Toast"/>
+    <Button
+        android:id="@+id/buttonOne"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="155dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:text="@string/feature_one_view_one_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etValueInput"/>
 
-        <Button
-            android:id="@+id/buttonTwo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Show Feature"/>
-    </LinearLayout>
+    <Button
+        android:id="@+id/buttonTwo"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="169dp"
+        android:layout_height="73dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:text="@string/feature_one_view_two_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etValueInput"/>
 
     <EditText
-        android:id="@+id/etUserName"
-        android:layout_width="365dp"
-        android:layout_height="57dp"
-        android:layout_marginBottom="8dp"
+        android:id="@+id/etValueInput"
+        android:layout_width="353dp"
+        android:layout_height="52dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="Username"
+        android:hint="@string/feature_one_value_input_hint"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/buttonContainer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"/>

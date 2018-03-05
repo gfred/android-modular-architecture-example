@@ -8,25 +8,25 @@ import io.reactivex.disposables.CompositeDisposable
 
 class FeatureOnePresenterImpl(private val navigation: FeatureOneNavigator,
                               private val tracker: TrackingService,
-                              private val userService: StringService) : FeatureOnePresenter {
+                              private val stringService: StringService) : FeatureOnePresenter {
 
     private var disposables = CompositeDisposable()
 
     override fun create(activity: FeatureOneActivity) {
-        activity.setUserName(userService.getString())
+        activity.setValue(stringService.getString())
 
-        disposables.add(activity.onUserNameChanged().subscribe() {
-            tracker.track("On Text Changed:" + it)
-            userService.setString(it.toString())
+        disposables.add(activity.onValueChanged().subscribe() {
+            tracker.track("Value changed: $it")
+            stringService.setString(it.toString())
         })
 
         disposables.add(activity.onButtonOneClicked().subscribe {
-            tracker.track("Button One Clicked!")
-            activity.showToast()
+            tracker.track("Button one clicked!")
+            activity.showToast(stringService.getString())
         })
 
         disposables.add(activity.onButtonTwoClicked().subscribe {
-            tracker.track("Button Two Clicked!")
+            tracker.track("Button two clicked!")
             navigation.showFeatureTwo()
         })
     }

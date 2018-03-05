@@ -29,16 +29,16 @@ class FeatureOneActivity : AppCompatActivity() {
         super.onStop()
     }
 
-    fun setUserName(username: String) {
-        etUserName.setText(username)
-        etUserName.setSelection(username.length)
+    fun setValue(value: String) {
+        etValueInput.setText(value)
+        etValueInput.setSelection(value.length)
     }
 
-    fun onUserNameChanged() = RxTextView.textChanges(etUserName)
+    fun onValueChanged() = RxTextView.textChanges(etValueInput)
 
     fun onButtonOneClicked() = RxView.clicks(buttonOne)
 
     fun onButtonTwoClicked() = RxView.clicks(buttonTwo)
 
-    fun showToast() = Toast.makeText(this, "Button from View Two clicked.", Toast.LENGTH_SHORT).show()
+    fun showToast(value: String) = Toast.makeText(this, getString(R.string.feature_one_toast_message, value), Toast.LENGTH_SHORT).show()
 }

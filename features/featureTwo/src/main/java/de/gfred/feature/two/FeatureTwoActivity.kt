@@ -27,5 +27,5 @@ class FeatureTwoActivity : AppCompatActivity() {
         super.onStop()
     }
 
-    fun setUserName(userNameValue: String) = userName.setText(userNameValue)
+    fun setStringValue(userNameValue: String) = userName.setText(userNameValue)
 }
