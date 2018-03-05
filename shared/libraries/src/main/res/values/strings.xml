@@ -11,7 +11,7 @@
 
     <string name="feature_two_title">Feature 2</string>
     <string name="feature_two_message">Feature 2 is showing.</string>
-    <string name="feature_two_string_value">Value:</string>
+    <string name="feature_two_string_value">Value</string>
     <string name="feature_two_string_value_not_available">Value not available</string>
 
     <string name="tracking_track_msg">track: %s</string>

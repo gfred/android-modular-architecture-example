@@ -2,7 +2,7 @@ buildscript {
     // TODO Could be extracted into an own file.
     ext.kotlin_version = '1.2.21'
     ext.android_compileSDK = 26
-    ext.android_minSDK = 19
+    ext.android_minSDK = 21
     ext.android_targetSDK = 26
     ext.version_name = "1.0.0"
     ext.version_code = 1
