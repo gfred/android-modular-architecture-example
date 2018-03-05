@@ -1,4 +1,4 @@
-package de.gfred.shared.models.tracking
+package de.gfred.shared.tracking
 
 
 interface TrackingService {

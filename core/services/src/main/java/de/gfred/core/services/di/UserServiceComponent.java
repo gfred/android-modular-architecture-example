@@ -1,6 +1,6 @@
 package de.gfred.core.services.di;
 
-import de.gfred.shared.models.services.StringService;
+import de.gfred.shared.services.StringService;
 import dagger.Subcomponent;
 
 @Subcomponent(modules = UserServiceModule.class)

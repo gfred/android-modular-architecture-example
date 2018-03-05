@@ -1,8 +1,8 @@
 package de.gfred.feature.one
 
-import de.gfred.shared.models.navigation.features.FeatureOneNavigator
-import de.gfred.shared.models.services.StringService
-import de.gfred.shared.models.tracking.TrackingService
+import de.gfred.shared.navigation.features.FeatureOneNavigator
+import de.gfred.shared.services.StringService
+import de.gfred.shared.tracking.TrackingService
 import io.reactivex.disposables.CompositeDisposable
 
 

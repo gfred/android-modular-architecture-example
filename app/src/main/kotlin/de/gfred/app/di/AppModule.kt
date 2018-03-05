@@ -1,7 +1,7 @@
 package de.gfred.app.di
 
 import android.content.Context
-import de.gfred.shared.models.navigation.NavigationProvider
+import de.gfred.shared.navigation.NavigationProvider
 import de.gfred.shared.tracking.di.TrackingServiceModule
 import dagger.Module
 import dagger.Provides

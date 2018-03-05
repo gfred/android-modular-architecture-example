@@ -1,4 +1,4 @@
-package de.gfred.shared.models.navigation.features
+package de.gfred.shared.navigation.features
 
 
 interface FeatureOneNavigator {

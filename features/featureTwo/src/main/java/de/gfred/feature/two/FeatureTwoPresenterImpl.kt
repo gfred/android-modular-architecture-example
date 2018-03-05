@@ -1,6 +1,6 @@
 package de.gfred.feature.two
 
-import de.gfred.shared.models.services.StringService
+import de.gfred.shared.services.StringService
 import javax.inject.Inject
 import javax.inject.Singleton
 

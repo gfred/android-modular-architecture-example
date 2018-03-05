@@ -2,8 +2,8 @@ package de.gfred.navigator
 
 import android.content.Context
 import android.content.Intent
-import de.gfred.shared.models.navigation.NavigationProvider
-import de.gfred.shared.models.navigation.features.FeatureOneNavigator
+import de.gfred.shared.navigation.NavigationProvider
+import de.gfred.shared.navigation.features.FeatureOneNavigator
 import de.gfred.feature.two.FeatureTwoActivity
 import javax.inject.Inject
 import javax.inject.Singleton

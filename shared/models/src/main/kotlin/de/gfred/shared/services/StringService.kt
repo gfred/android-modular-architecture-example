@@ -1,4 +1,4 @@
-package de.gfred.shared.models.services
+package de.gfred.shared.services
 
 interface StringService {
     fun hasString() : Boolean

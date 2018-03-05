@@ -1,7 +1,7 @@
 package com.mytaxi.core.services;
 
 import de.gfred.core.services.StringServiceImpl;
-import de.gfred.shared.models.services.StringService;
+import de.gfred.shared.services.StringService;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

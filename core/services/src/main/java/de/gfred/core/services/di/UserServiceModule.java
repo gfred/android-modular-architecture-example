@@ -1,7 +1,7 @@
 package de.gfred.core.services.di;
 
 import de.gfred.core.services.StringServiceImpl;
-import de.gfred.shared.models.services.StringService;
+import de.gfred.shared.services.StringService;
 import dagger.Module;
 import dagger.Provides;
 

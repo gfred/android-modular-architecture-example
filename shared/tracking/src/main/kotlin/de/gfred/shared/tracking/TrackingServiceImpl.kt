@@ -2,7 +2,6 @@ package de.gfred.shared.tracking
 
 import android.content.Context
 import android.util.Log
-import de.gfred.shared.models.tracking.TrackingService
 import javax.inject.Inject
 
 
