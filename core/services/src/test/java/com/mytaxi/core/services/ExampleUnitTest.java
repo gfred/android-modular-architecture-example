@@ -6,7 +6,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class ExampleUnitTest
@@ -29,25 +29,24 @@ public class ExampleUnitTest
 
 
     @Test
+    public void hasNoInitialStringValue()
+    {
+        assertFalse(service.hasString());
+    }
+
+
+    @Test
     public void hasStringValueNotAvailable()
     {
-        service.setString("Robin");
-        assertTrue(service.hasString());
+        service.setString("");
+        assertFalse(service.hasString());
     }
 
 
     @Test
     public void hasStringValueAvailable()
     {
-        service.setString("Robin");
+        service.setString("Test");
         assertTrue(service.hasString());
-    }
-
-
-    @Test
-    public void hasInitialStringValue()
-    {
-        assertTrue(service.hasString());
-        assertEquals("Batman", service.getString());
     }
 }

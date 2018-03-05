@@ -6,7 +6,7 @@ import javax.inject.Singleton
 
 @Singleton
 class StringServiceImpl @Inject constructor() : StringService {
-    private var value = "Batman"
+    private var value = ""
 
     override fun hasString(): Boolean = value.isNotEmpty()
 
