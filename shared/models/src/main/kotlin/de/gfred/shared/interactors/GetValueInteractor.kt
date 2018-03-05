@@ -1,7 +1,9 @@
 package de.gfred.shared.interactors
 
-/**
- * Created by f.goetz on 3/5/18.
- */
+import io.reactivex.Observable
+
 interface GetValueInteractor {
+    fun receiveValue(): Observable<String>
+
+    fun hasValue(): Boolean
 }
