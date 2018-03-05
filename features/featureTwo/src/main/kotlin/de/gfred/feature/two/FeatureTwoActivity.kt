@@ -28,5 +28,5 @@ class FeatureTwoActivity : AppCompatActivity() {
         super.onStop()
     }
 
-    fun setStringValue(value: String) = tvValue.setText(value)
+    fun setValue(value: String) = tvValue.setText(value)
 }

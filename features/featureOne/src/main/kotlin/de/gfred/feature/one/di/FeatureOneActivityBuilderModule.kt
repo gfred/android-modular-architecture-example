@@ -7,7 +7,7 @@ import de.gfred.core.interactors.di.UpdateValueInteractorModule
 import de.gfred.feature.one.FeatureOneActivity
 
 @Module
-abstract class FeatureOneBuilderModule {
+abstract class FeatureOneActivityBuilderModule {
     @ContributesAndroidInjector(modules = [FeatureOneActivityModule::class, GetValueInteractorModule::class, UpdateValueInteractorModule::class])
-    abstract fun contributeMainActivity(): FeatureOneActivity
+    abstract fun contributeFeatureOneActivity(): FeatureOneActivity
 }

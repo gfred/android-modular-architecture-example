@@ -4,10 +4,11 @@ import dagger.Module
 import dagger.Provides
 import de.gfred.feature.two.FeatureTwoPresenter
 import de.gfred.feature.two.FeatureTwoPresenterImpl
-import de.gfred.shared.services.StringService
+import javax.inject.Singleton
 
+@Singleton
 @Module
 class FeatureTwoActivityModule {
     @Provides
-    fun providesFeatureTwoPresenter(stringService: StringService): FeatureTwoPresenter = FeatureTwoPresenterImpl(stringService)
+    fun providesFeatureTwoPresenter(featureTwoPresenterImpl: FeatureTwoPresenterImpl): FeatureTwoPresenter = featureTwoPresenterImpl
 }

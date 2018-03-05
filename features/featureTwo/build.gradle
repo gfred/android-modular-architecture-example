@@ -29,7 +29,7 @@ android {
 }
 
 dependencies {
-    api project(":core:services")
+    api project(":core:interactors")
 
     implementation project(":shared:libraries")
     implementation project(":shared:models")

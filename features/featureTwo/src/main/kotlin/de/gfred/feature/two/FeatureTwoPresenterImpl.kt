@@ -1,21 +1,24 @@
 package de.gfred.feature.two
 
 import de.gfred.feature.two.two.R
-import de.gfred.shared.services.StringService
+import de.gfred.shared.interactors.GetValueInteractor
+import io.reactivex.disposables.CompositeDisposable
 import javax.inject.Inject
-import javax.inject.Singleton
 
-@Singleton
-class FeatureTwoPresenterImpl @Inject constructor(private val stringService: StringService) : FeatureTwoPresenter {
+
+class FeatureTwoPresenterImpl @Inject constructor(private val getValueInteractor: GetValueInteractor) : FeatureTwoPresenter {
+
+    private var disposables = CompositeDisposable()
 
     override fun create(activity: FeatureTwoActivity) {
-        if (stringService.hasString()) {
-            activity.setStringValue(stringService.getString())
+        if (getValueInteractor.hasValue()) {
+            disposables.add(getValueInteractor.receiveValue().subscribe({ activity.setValue(it) }))
         } else {
-            activity.setStringValue(activity.getString(R.string.feature_two_string_value_not_available))
+            activity.setValue(activity.getString(R.string.feature_two_string_value_not_available))
         }
     }
 
     override fun destroy() {
+        disposables.clear()
     }
 }
