@@ -6,7 +6,7 @@ import de.gfred.shared.tracking.di.TrackingServiceModule
 import dagger.Module
 import dagger.Provides
 import de.gfred.app.MainApplication
-import de.gfred.app.navigator.NavigationProviderImpl
+import de.gfred.navigator.NavigationProviderImpl
 
 @Module(includes = [TrackingServiceModule::class])
 class AppModule {

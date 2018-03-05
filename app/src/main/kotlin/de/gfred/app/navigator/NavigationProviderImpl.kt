@@ -1,4 +1,4 @@
-package de.gfred.app.navigator
+package de.gfred.navigator
 
 import android.content.Context
 import android.content.Intent
