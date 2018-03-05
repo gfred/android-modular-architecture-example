@@ -4,9 +4,10 @@ import de.gfred.shared.navigation.features.FeatureOneNavigator
 import de.gfred.shared.services.StringService
 import de.gfred.shared.tracking.TrackingService
 import io.reactivex.disposables.CompositeDisposable
+import javax.inject.Inject
 
 
-class FeatureOnePresenterImpl(private val navigation: FeatureOneNavigator,
+class FeatureOnePresenterImpl @Inject constructor(private val navigation: FeatureOneNavigator,
                               private val tracker: TrackingService,
                               private val stringService: StringService) : FeatureOnePresenter {
 

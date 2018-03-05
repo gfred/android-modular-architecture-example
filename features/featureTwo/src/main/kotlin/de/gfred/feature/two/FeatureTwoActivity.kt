@@ -3,6 +3,7 @@ package de.gfred.feature.two
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import dagger.android.AndroidInjection
+import de.gfred.feature.two.two.R
 import kotlinx.android.synthetic.main.actvitiy_feature_two.*
 import javax.inject.Inject
 

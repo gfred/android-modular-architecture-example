@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="de.gfred.feature.two"
+<manifest package="de.gfred.feature.two.two"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application>
-        <activity android:name=".FeatureTwoActivity"/>
+        <activity android:name="de.gfred.feature.two.FeatureTwoActivity"/>
     </application>
 
 </manifest>
